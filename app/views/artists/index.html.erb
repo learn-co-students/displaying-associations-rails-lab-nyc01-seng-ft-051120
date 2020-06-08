@@ -1,0 +1,5 @@
+<h1>Artist</h1>
+<%@artists.each do |a|%>
+<h2> Artist Name: <%= a.name %> 
+<%=(Song.all.select{|s| s.artist_id==a.id}).count%> songs</h2><br>
+<% end %>

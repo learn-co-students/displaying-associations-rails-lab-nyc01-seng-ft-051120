@@ -1,0 +1,11 @@
+
+<h1>ARTIST</h1>
+<h2><%=@artist.name%> has following songs</h2>
+<ul><%songs=Song.all.select do |s|%>
+<%if s.artist_id==@artist.id%>
+<li><%=link_to s.title, song_path(s)%></li>
+<% end %>
+<% end %>
+</ul>
+
+
